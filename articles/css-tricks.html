@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="google-site-verification" content="yt-819KdK_bgAPrWo1yZVDAx4aff5uupoFDnoDFtGgo" />
+  <meta name="p:domain_verify" content="69f933b06e6bd776e9c2b8a6da72f82f"/>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-731D3R88WY"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-731D3R88WY');
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Modern CSS Tricks Every Developer Should Know | ToolVerse AI</title>
+  <meta name="description" content="Container queries, :has(), and cascade layers — the properties that finally make CSS powerful." />
+  <meta name="author" content="Max Rivera" />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+  <link rel="canonical" href="https://tech-blog-pk.github.io/Tool-verse-ai/articles/css-tricks.html" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://tech-blog-pk.github.io/Tool-verse-ai/articles/css-tricks.html" />
+  <meta property="og:title" content="Modern CSS Tricks Every Developer Should Know" />
+  <meta property="og:description" content="Container queries, :has(), and cascade layers — the properties that finally make CSS powerful." />
+  <meta property="og:image" content="https://tech-blog-pk.github.io/Tool-verse-ai/og-cover.png" />
+  <meta property="og:site_name" content="ToolVerse AI" />
+  <meta property="article:published_time" content="2025-05-03" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Modern CSS Tricks Every Developer Should Know" />
+  <meta name="twitter:description" content="Container queries, :has(), and cascade layers — the properties that finally make CSS powerful." />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%2300ff87'/><text x='5' y='23' font-size='20' font-family='monospace' font-weight='bold' fill='%230a0f0a'>T</text></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /><link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Syne:wght@700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/style.css" />
+  <style>#article-section{display:block !important;}</style>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Modern CSS Tricks Every Developer Should Know", "description": "Container queries, :has(), and cascade layers — the properties that finally make CSS powerful.", "datePublished": "2025-05-03", "dateModified": "2025-05-03", "author": {"@type": "Organization", "name": "Max Rivera"}, "publisher": {"@type": "Organization", "name": "ToolVerse AI"}, "mainEntityOfPage": "https://tech-blog-pk.github.io/Tool-verse-ai/articles/css-tricks.html"}</script>
+</head>
+<body>
+<nav class="nav" id="navbar" aria-label="Main navigation">
+  <div class="nav-inner">
+    <a class="nav-logo" href="../index.html" aria-label="ToolVerse AI Home">
+      <div class="nav-logo-mark" aria-hidden="true">T</div>
+      <span class="nav-logo-text">Tool<span>Verse</span></span>
+    </a>
+    <ul class="nav-links" role="list">
+      <li><a href="../index.html#hero" class="nav-link">Home</a></li>
+      <li><a href="../index.html#ai-tools" class="nav-link">AI Tools</a></li>
+      <li><a href="../index.html#dev-tools" class="nav-link">Dev Tools</a></li>
+      <li><a href="../index.html#blog" class="nav-link active">Blog</a></li>
+      <li><a href="../index.html#newsletter" class="nav-link">Newsletter</a></li>
+      <li><a href="../index.html#contact" class="nav-link">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="theme-btn" id="themeToggle" aria-label="Toggle color theme" title="Toggle dark/light mode">🌙</button>
+      <a href="../index.html#dev-tools" class="btn btn-primary btn-sm">Try Tools</a>
+      <button class="hamburger" id="hamburgerBtn" aria-label="Toggle mobile menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Mobile navigation">
+  <nav class="mobile-menu-links" aria-label="Mobile links">
+    <a href="../index.html#hero">🏠 Home</a>
+    <a href="../index.html#ai-tools">🤖 AI Tools</a>
+    <a href="../index.html#dev-tools">⚡ Dev Tools</a>
+    <a href="../index.html#blog" class="active">✍️ Blog</a>
+    <a href="../index.html#newsletter">📬 Newsletter</a>
+    <a href="../index.html#contact">✉️ Contact</a>
+  </nav>
+  <a href="../index.html#dev-tools" class="btn btn-primary" style="width:100%;justify-content:center;">Try Free Tools →</a>
+</div>
+<div id="article-section" role="main" aria-label="Article page">
+  <div class="read-progress" aria-hidden="true"><div class="read-progress-fill" id="read-progress-fill"></div></div>
+  <div class="container"><div class="article-back-bar"><a class="back-btn" href="../index.html#blog" style="text-decoration:none;">← Back to Blog</a></div></div>
+  <div class="article-hero"><div class="container">
+    <div class="article-tag-row"><span class="badge badge-new">CSS</span>
+      <span style="font-size:0.75rem;color:var(--text-3);font-family:var(--font-mono);">// 5 min read</span></div>
+    <h1 class="article-title-main">Modern CSS Tricks Every Developer Should Know</h1>
+    <div class="article-meta-row">
+      <div class="article-author-wrap"><div class="article-author-avatar">MR</div>
+        <div><div class="article-author-name">Max Rivera</div><div class="article-author-role">ToolVerse AI Contributor</div></div></div>
+      <div class="article-meta-info"><span>📅 <span>May 3, 2025</span></span><span>⏱ <span>5 min</span> read</span></div>
+    </div></div></div>
+  <div class="container"><div class="article-thumb-banner" style="background:linear-gradient(135deg,#1a200d,#2a3a1a);"><span style="font-size:80px;position:relative;z-index:1;">🎨</span></div></div>
+  <div class="container"><article class="article-body">
+      <p>CSS has undergone a quiet revolution over the last two years. Features that developers begged for since the early days of the web have finally landed — and they're now supported in all major browsers. Here are the ones that will actually change how you write CSS.</p>
+
+      <h2>Container Queries — The Real Responsive Design</h2>
+      <p>For fifteen years, media queries were our only tool for responsive design. The problem: they respond to the <em>viewport</em>, not the component's own container. This made truly reusable components nearly impossible. Container queries solve this.</p>
+
+      <div class="code-block">
+        <div class="code-block-header">
+          <span class="code-lang-label">CSS</span>
+          <button class="code-copy-btn" onclick="copyCode(this)">Copy</button>
+        </div>
+        <pre><span class="cm">/* Make a container query-aware */</span>
+.card-wrapper {
+  container-type: inline-size;
+  container-name: card;
+}
+
+<span class="cm">/* Style the card based on its OWN container width */</span>
+@container card (min-width: <span class="num">400px</span>) {
+  .card {
+    display: flex;
+    flex-direction: row;
+    gap: <span class="num">24px</span>;
+  }
+}
+
+@container card (max-width: <span class="num">399px</span>) {
+  .card {
+    flex-direction: column;
+  }
+}</pre>
+      </div>
+
+      <h2>The :has() Selector — The Parent Selector We Always Wanted</h2>
+      <p><code>:has()</code> is arguably the most powerful CSS selector ever added to the language. It lets you style an element based on what it <em>contains</em> — something that was previously only possible with JavaScript.</p>
+
+      <div class="code-block">
+        <div class="code-block-header">
+          <span class="code-lang-label">CSS</span>
+          <button class="code-copy-btn" onclick="copyCode(this)">Copy</button>
+        </div>
+        <pre><span class="cm">/* Style a form that contains an invalid input */</span>
+form:has(input:invalid) {
+  border-color: red;
+}
+
+<span class="cm">/* Style nav when it has an active link */</span>
+nav:has(.active) {
+  background: var(--highlight-bg);
+}
+
+<span class="cm">/* Card that contains an image gets different padding */</span>
+.card:has(img) {
+  padding-top: <span class="num">0</span>;
+}</pre>
+      </div>
+
+      <h2>Cascade Layers — End the Specificity Wars</h2>
+      <p>Specificity conflicts are one of the most frustrating parts of working with CSS in large projects. <code>@layer</code> lets you define an explicit ordering for your styles, so you always know which rule wins — regardless of specificity.</p>
+
+      <div class="code-block">
+        <div class="code-block-header">
+          <span class="code-lang-label">CSS</span>
+          <button class="code-copy-btn" onclick="copyCode(this)">Copy</button>
+        </div>
+        <pre><span class="cm">/* Declare layer order — later layers win */</span>
+@layer reset, base, components, utilities;
+
+@layer reset {
+  * { box-sizing: border-box; margin: <span class="num">0</span>; }
+}
+
+@layer components {
+  .btn { padding: <span class="num">8px 16px</span>; border-radius: <span class="num">6px</span>; }
+}
+
+<span class="cm">/* Utilities always win, regardless of specificity */</span>
+@layer utilities {
+  .mt-0 { margin-top: <span class="num">0</span> !important; }
+}</pre>
+      </div>
+
+      <h2>Native CSS Nesting</h2>
+      <p>You no longer need Sass or PostCSS for nesting. Native CSS nesting is supported in all modern browsers and lets you write more organized, scoped styles without a build step.</p>
+
+      <div class="code-block">
+        <div class="code-block-header">
+          <span class="code-lang-label">CSS</span>
+          <button class="code-copy-btn" onclick="copyCode(this)">Copy</button>
+        </div>
+        <pre>.card {
+  background: var(--bg-card);
+  border-radius: <span class="num">12px</span>;
+
+  <span class="cm">/* Nested selectors — no Sass needed */</span>
+  &:hover {
+    transform: translateY(<span class="num">-4px</span>);
+  }
+
+  & .card-title {
+    font-size: <span class="num">1.2rem</span>;
+    font-weight: <span class="num">700</span>;
+  }
+
+  @media (max-width: <span class="num">600px</span>) {
+    padding: <span class="num">16px</span>;
+  }
+}</pre>
+      </div>
+
+      <h2>Key Takeaways</h2>
+      <ul>
+        <li>Use <strong>container queries</strong> for components that need to adapt to their context, not just the viewport</li>
+        <li><strong>:has()</strong> replaces most JavaScript used purely for adding/removing CSS classes</li>
+        <li><strong>@layer</strong> is the permanent solution to specificity conflicts in large codebases</li>
+        <li><strong>Native nesting</strong> means you can ditch Sass for most projects today</li>
+      </ul>
+    </article></div>
+  <div class="article-related"><div class="container"><h3>More Articles</h3><div class="related-grid"><a class="related-card" href="openai-misalignment-report-24-incidents-2026.html" style="text-decoration:none;display:block;"><div class="related-emoji">📋</div><div class="related-tag"><span class="badge badge-new" style="font-size:0.6rem;">AI</span></div><div class="related-title">OpenAI’s 24 “Misalignment” Incidents, Explained: What Its AI Agents Actually Did</div><div class="related-read">Read article →</div></a><a class="related-card" href="claude-opus-5-5-explained-2026.html" style="text-decoration:none;display:block;"><div class="related-emoji">🧠</div><div class="related-tag"><span class="badge badge-new" style="font-size:0.6rem;">AI</span></div><div class="related-title">Claude Opus 5.5 Explained: Anthropic’s Cheaper, Safer New Flagship Model</div><div class="related-read">Read article →</div></a><a class="related-card" href="openai-agent-medicare-hack-2026.html" style="text-decoration:none;display:block;"><div class="related-emoji">🏥</div><div class="related-tag"><span class="badge badge-new" style="font-size:0.6rem;">AI</span></div><div class="related-title">An OpenAI Agent “Hacked” Australia’s Medicare Portal: What Actually Happened</div><div class="related-read">Read article →</div></a></div></div></div>
+</div>
+<footer class="footer" id="site-footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <div class="nav-logo-mark" style="width:28px;height:28px;font-size:0.8rem;" aria-hidden="true">T</div>
+          <span style="font-family:var(--font-display);font-weight:800;color:var(--text-1);">Tool<span style="color:var(--accent);">Verse</span> AI</span>
+        </div>
+        <p class="footer-brand-desc">Your curated hub for AI tools, interactive developer utilities, and the tech insights that matter to builders.</p>
+      </div>
+      <div class="footer-col"><h5>Content</h5><ul>
+        <li><a href="../index.html#ai-tools">AI Tools</a></li>
+        <li><a href="../index.html#dev-tools">Developer Tools</a></li>
+        <li><a href="../index.html#blog">Blog &amp; Articles</a></li>
+        <li><a href="../index.html#newsletter">Newsletter</a></li></ul></div>
+      <div class="footer-col"><h5>Company</h5><ul>
+        <li><a href="../index.html#about">About</a></li>
+        <li><a href="../index.html#contact">Contact</a></li>
+        <li><a href="mailto:toolverse67@gmail.com">toolverse67@gmail.com</a></li>
+        <li><a href="../index.html#privacy-policy">Privacy Policy</a></li></ul></div>
+    </div>
+    <div class="footer-bottom">
+      <span class="footer-bottom-text">© 2026 ToolVerse AI — built for the dev community</span>
+      <div class="footer-bottom-links">
+        <a href="../index.html#privacy-policy">Privacy</a>
+        <a href="../index.html#terms">Terms</a>
+        <a href="../index.html#contact">Contact</a>
+      </div>
+    </div>
+  </div>
+</footer>
+<script>
+(function(){
+  var nav=document.getElementById('navbar');
+  window.addEventListener('scroll',function(){nav.classList.toggle('scrolled',window.scrollY>20);
+    var total=document.documentElement.scrollHeight-window.innerHeight;
+    document.getElementById('read-progress-fill').style.width=Math.min(total>0?(window.scrollY/total)*100:0,100)+'%';},{passive:true});
+  var hb=document.getElementById('hamburgerBtn'),mm=document.getElementById('mobileMenu');
+  hb.addEventListener('click',function(){var o=mm.classList.toggle('open');hb.classList.toggle('open',o);hb.setAttribute('aria-expanded',o);});
+  document.addEventListener('click',function(e){if(!hb.contains(e.target)&&!mm.contains(e.target)){mm.classList.remove('open');hb.classList.remove('open');}});
+  var tb=document.getElementById('themeToggle');
+  function apply(d){document.documentElement.setAttribute('data-theme',d?'dark':'light');tb.textContent=d?'🌙':'☀️';try{localStorage.setItem('tv-theme',d?'dark':'light');}catch(e){}}
+  tb.addEventListener('click',function(){apply(document.documentElement.getAttribute('data-theme')!=='dark');});
+  try{var s=localStorage.getItem('tv-theme');if(s)apply(s==='dark');}catch(e){}
+})();
+function copyCode(btn){var pre=btn.closest('.code-block').querySelector('pre');
+  navigator.clipboard.writeText(pre.innerText||pre.textContent).then(function(){btn.textContent='✓ Copied';setTimeout(function(){btn.textContent='Copy';},1600);});}
+</script>
+</body>
+</html>
