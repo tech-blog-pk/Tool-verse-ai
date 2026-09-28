@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://tech-blog-pk.github.io/Tool-verse-ai/sitemap.xml
