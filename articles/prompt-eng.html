@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="google-site-verification" content="yt-819KdK_bgAPrWo1yZVDAx4aff5uupoFDnoDFtGgo" />
+  <meta name="p:domain_verify" content="69f933b06e6bd776e9c2b8a6da72f82f"/>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-731D3R88WY"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-731D3R88WY');
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Prompt Engineering: From Zero to Production | ToolVerse AI</title>
+  <meta name="description" content="Techniques that consistently deliver the output you need — few-shot, chain-of-thought, and more." />
+  <meta name="author" content="Lena Park" />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+  <link rel="canonical" href="https://tech-blog-pk.github.io/Tool-verse-ai/articles/prompt-eng.html" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://tech-blog-pk.github.io/Tool-verse-ai/articles/prompt-eng.html" />
+  <meta property="og:title" content="Prompt Engineering: From Zero to Production" />
+  <meta property="og:description" content="Techniques that consistently deliver the output you need — few-shot, chain-of-thought, and more." />
+  <meta property="og:image" content="https://tech-blog-pk.github.io/Tool-verse-ai/og-cover.png" />
+  <meta property="og:site_name" content="ToolVerse AI" />
+  <meta property="article:published_time" content="2025-04-28" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Prompt Engineering: From Zero to Production" />
+  <meta name="twitter:description" content="Techniques that consistently deliver the output you need — few-shot, chain-of-thought, and more." />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%2300ff87'/><text x='5' y='23' font-size='20' font-family='monospace' font-weight='bold' fill='%230a0f0a'>T</text></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /><link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Syne:wght@700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/style.css" />
+  <style>#article-section{display:block !important;}</style>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Prompt Engineering: From Zero to Production", "description": "Techniques that consistently deliver the output you need — few-shot, chain-of-thought, and more.", "datePublished": "2025-04-28", "dateModified": "2025-04-28", "author": {"@type": "Organization", "name": "Lena Park"}, "publisher": {"@type": "Organization", "name": "ToolVerse AI"}, "mainEntityOfPage": "https://tech-blog-pk.github.io/Tool-verse-ai/articles/prompt-eng.html"}</script>
+</head>
+<body>
+<nav class="nav" id="navbar" aria-label="Main navigation">
+  <div class="nav-inner">
+    <a class="nav-logo" href="../index.html" aria-label="ToolVerse AI Home">
+      <div class="nav-logo-mark" aria-hidden="true">T</div>
+      <span class="nav-logo-text">Tool<span>Verse</span></span>
+    </a>
+    <ul class="nav-links" role="list">
+      <li><a href="../index.html#hero" class="nav-link">Home</a></li>
+      <li><a href="../index.html#ai-tools" class="nav-link">AI Tools</a></li>
+      <li><a href="../index.html#dev-tools" class="nav-link">Dev Tools</a></li>
+      <li><a href="../index.html#blog" class="nav-link active">Blog</a></li>
+      <li><a href="../index.html#newsletter" class="nav-link">Newsletter</a></li>
+      <li><a href="../index.html#contact" class="nav-link">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="theme-btn" id="themeToggle" aria-label="Toggle color theme" title="Toggle dark/light mode">🌙</button>
+      <a href="../index.html#dev-tools" class="btn btn-primary btn-sm">Try Tools</a>
+      <button class="hamburger" id="hamburgerBtn" aria-label="Toggle mobile menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Mobile navigation">
+  <nav class="mobile-menu-links" aria-label="Mobile links">
+    <a href="../index.html#hero">🏠 Home</a>
+    <a href="../index.html#ai-tools">🤖 AI Tools</a>
+    <a href="../index.html#dev-tools">⚡ Dev Tools</a>
+    <a href="../index.html#blog" class="active">✍️ Blog</a>
+    <a href="../index.html#newsletter">📬 Newsletter</a>
+    <a href="../index.html#contact">✉️ Contact</a>
+  </nav>
+  <a href="../index.html#dev-tools" class="btn btn-primary" style="width:100%;justify-content:center;">Try Free Tools →</a>
+</div>
+<div id="article-section" role="main" aria-label="Article page">
+  <div class="read-progress" aria-hidden="true"><div class="read-progress-fill" id="read-progress-fill"></div></div>
+  <div class="container"><div class="article-back-bar"><a class="back-btn" href="../index.html#blog" style="text-decoration:none;">← Back to Blog</a></div></div>
+  <div class="article-hero"><div class="container">
+    <div class="article-tag-row"><span class="badge badge-new">AI</span>
+      <span style="font-size:0.75rem;color:var(--text-3);font-family:var(--font-mono);">// 7 min read</span></div>
+    <h1 class="article-title-main">Prompt Engineering: From Zero to Production</h1>
+    <div class="article-meta-row">
+      <div class="article-author-wrap"><div class="article-author-avatar">LP</div>
+        <div><div class="article-author-name">Lena Park</div><div class="article-author-role">ToolVerse AI Contributor</div></div></div>
+      <div class="article-meta-info"><span>📅 <span>Apr 28, 2025</span></span><span>⏱ <span>7 min</span> read</span></div>
+    </div></div></div>
+  <div class="container"><div class="article-thumb-banner" style="background:linear-gradient(135deg,#1b1230,#2a1a4a);"><span style="font-size:80px;position:relative;z-index:1;">✍️</span></div></div>
+  <div class="container"><article class="article-body">
+      <p>Prompt engineering is the skill of communicating precisely with AI models to get the output you actually want. It's part specification writing, part UX design, and part debugging. The good news: a handful of techniques cover 90% of real-world use cases.</p>
+
+      <h2>The System Prompt Is Your Foundation</h2>
+      <p>The system prompt is the job description you give the model before any user interaction. A vague system prompt leads to inconsistent, generic outputs. A precise system prompt transforms the model into a specialist.</p>
+
+      <div class="code-block">
+        <div class="code-block-header">
+          <span class="code-lang-label">Prompt</span>
+          <button class="code-copy-btn" onclick="copyCode(this)">Copy</button>
+        </div>
+        <pre><span class="cm">❌ Bad system prompt:</span>
+"You are a helpful assistant."
+
+<span class="cm">✅ Good system prompt:</span>
+"You are a senior TypeScript developer reviewing pull requests.
+Your job is to:
+1. Identify bugs, not style preferences
+2. Explain WHY something is a bug, not just WHAT
+3. Suggest a fix with a code example
+4. Be direct and concise — no flattery, no filler
+Format: Bug description → Why it's a bug → Fixed code"</pre>
+      </div>
+
+      <h2>Few-Shot Examples Beat Instructions</h2>
+      <p>Telling a model what to do is good. Showing it what good output looks like is better. Few-shot prompting — providing 2–3 examples of input/output pairs — dramatically improves consistency for structured tasks.</p>
+
+      <div class="code-block">
+        <div class="code-block-header">
+          <span class="code-lang-label">Prompt</span>
+          <button class="code-copy-btn" onclick="copyCode(this)">Copy</button>
+        </div>
+        <pre">Classify the sentiment of each review as POSITIVE, NEGATIVE, or NEUTRAL.
+
+Review: "This tool saved me hours every week."
+Sentiment: POSITIVE
+
+Review: "It works, but the UI could be better."
+Sentiment: NEUTRAL
+
+Review: "Completely broken after the last update."
+Sentiment: NEGATIVE
+
+Review: "{{USER_REVIEW}}"
+Sentiment:</pre>
+      </div>
+
+      <h2>Chain of Thought for Complex Reasoning</h2>
+      <p>For tasks that require reasoning — math problems, debugging, multi-step analysis — asking the model to "think step by step" consistently improves accuracy. This works because it forces the model to generate intermediate reasoning tokens before committing to a final answer.</p>
+
+      <div class="article-callout">
+        <div class="callout-icon">🧠</div>
+        <div class="callout-text"><strong>Why this works:</strong> LLMs generate tokens sequentially. When you ask for step-by-step reasoning, the model's intermediate steps become part of its own context — giving it more information to make a correct final decision.</div>
+      </div>
+
+      <div class="code-block">
+        <div class="code-block-header">
+          <span class="code-lang-label">Prompt</span>
+          <button class="code-copy-btn" onclick="copyCode(this)">Copy</button>
+        </div>
+        <pre">Analyze this bug report step by step:
+
+1. What is the observed symptom?
+2. What are the possible root causes?
+3. Which cause is most likely and why?
+4. What is the recommended fix?
+
+Bug report: Users report that the login button
+does nothing on mobile Safari after the latest deploy.</pre>
+      </div>
+
+      <h2>Structured Output with XML Tags</h2>
+      <p>When you need structured output — JSON, tables, specific sections — asking the model to use XML tags makes parsing far more reliable than trying to parse free-form text. Claude in particular responds very well to this pattern.</p>
+
+      <div class="code-block">
+        <div class="code-block-header">
+          <span class="code-lang-label">Prompt</span>
+          <button class="code-copy-btn" onclick="copyCode(this)">Copy</button>
+        </div>
+        <pre">Analyze this code and respond using this exact format:
+
+&lt;summary&gt;One sentence describing what the code does&lt;/summary&gt;
+&lt;issues&gt;List any bugs or problems found&lt;/issues&gt;
+&lt;suggestions&gt;Improvements you'd recommend&lt;/suggestions&gt;
+&lt;rating&gt;Code quality score from 1-10&lt;/rating&gt;
+
+Code to analyze:
+{{CODE}}</pre>
+      </div>
+
+      <h2>Key Principles to Remember</h2>
+      <ul>
+        <li><strong>Be specific about format</strong> — if you want a list, say "give me a bulleted list." If you want JSON, say "respond only in JSON."</li>
+        <li><strong>Give constraints, not just goals</strong> — "explain in 3 sentences" beats "explain concisely"</li>
+        <li><strong>Iterate like code</strong> — treat prompts as code you refactor, not one-shot instructions</li>
+        <li><strong>Test edge cases</strong> — a prompt that works 90% of the time will fail in production at scale</li>
+      </ul>
+    </article></div>
+  <div class="article-related"><div class="container"><h3>More Articles</h3><div class="related-grid"><a class="related-card" href="openai-misalignment-report-24-incidents-2026.html" style="text-decoration:none;display:block;"><div class="related-emoji">📋</div><div class="related-tag"><span class="badge badge-new" style="font-size:0.6rem;">AI</span></div><div class="related-title">OpenAI’s 24 “Misalignment” Incidents, Explained: What Its AI Agents Actually Did</div><div class="related-read">Read article →</div></a><a class="related-card" href="claude-opus-5-5-explained-2026.html" style="text-decoration:none;display:block;"><div class="related-emoji">🧠</div><div class="related-tag"><span class="badge badge-new" style="font-size:0.6rem;">AI</span></div><div class="related-title">Claude Opus 5.5 Explained: Anthropic’s Cheaper, Safer New Flagship Model</div><div class="related-read">Read article →</div></a><a class="related-card" href="openai-agent-medicare-hack-2026.html" style="text-decoration:none;display:block;"><div class="related-emoji">🏥</div><div class="related-tag"><span class="badge badge-new" style="font-size:0.6rem;">AI</span></div><div class="related-title">An OpenAI Agent “Hacked” Australia’s Medicare Portal: What Actually Happened</div><div class="related-read">Read article →</div></a></div></div></div>
+</div>
+<footer class="footer" id="site-footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <div class="nav-logo-mark" style="width:28px;height:28px;font-size:0.8rem;" aria-hidden="true">T</div>
+          <span style="font-family:var(--font-display);font-weight:800;color:var(--text-1);">Tool<span style="color:var(--accent);">Verse</span> AI</span>
+        </div>
+        <p class="footer-brand-desc">Your curated hub for AI tools, interactive developer utilities, and the tech insights that matter to builders.</p>
+      </div>
+      <div class="footer-col"><h5>Content</h5><ul>
+        <li><a href="../index.html#ai-tools">AI Tools</a></li>
+        <li><a href="../index.html#dev-tools">Developer Tools</a></li>
+        <li><a href="../index.html#blog">Blog &amp; Articles</a></li>
+        <li><a href="../index.html#newsletter">Newsletter</a></li></ul></div>
+      <div class="footer-col"><h5>Company</h5><ul>
+        <li><a href="../index.html#about">About</a></li>
+        <li><a href="../index.html#contact">Contact</a></li>
+        <li><a href="mailto:toolverse67@gmail.com">toolverse67@gmail.com</a></li>
+        <li><a href="../index.html#privacy-policy">Privacy Policy</a></li></ul></div>
+    </div>
+    <div class="footer-bottom">
+      <span class="footer-bottom-text">© 2026 ToolVerse AI — built for the dev community</span>
+      <div class="footer-bottom-links">
+        <a href="../index.html#privacy-policy">Privacy</a>
+        <a href="../index.html#terms">Terms</a>
+        <a href="../index.html#contact">Contact</a>
+      </div>
+    </div>
+  </div>
+</footer>
+<script>
+(function(){
+  var nav=document.getElementById('navbar');
+  window.addEventListener('scroll',function(){nav.classList.toggle('scrolled',window.scrollY>20);
+    var total=document.documentElement.scrollHeight-window.innerHeight;
+    document.getElementById('read-progress-fill').style.width=Math.min(total>0?(window.scrollY/total)*100:0,100)+'%';},{passive:true});
+  var hb=document.getElementById('hamburgerBtn'),mm=document.getElementById('mobileMenu');
+  hb.addEventListener('click',function(){var o=mm.classList.toggle('open');hb.classList.toggle('open',o);hb.setAttribute('aria-expanded',o);});
+  document.addEventListener('click',function(e){if(!hb.contains(e.target)&&!mm.contains(e.target)){mm.classList.remove('open');hb.classList.remove('open');}});
+  var tb=document.getElementById('themeToggle');
+  function apply(d){document.documentElement.setAttribute('data-theme',d?'dark':'light');tb.textContent=d?'🌙':'☀️';try{localStorage.setItem('tv-theme',d?'dark':'light');}catch(e){}}
+  tb.addEventListener('click',function(){apply(document.documentElement.getAttribute('data-theme')!=='dark');});
+  try{var s=localStorage.getItem('tv-theme');if(s)apply(s==='dark');}catch(e){}
+})();
+function copyCode(btn){var pre=btn.closest('.code-block').querySelector('pre');
+  navigator.clipboard.writeText(pre.innerText||pre.textContent).then(function(){btn.textContent='✓ Copied';setTimeout(function(){btn.textContent='Copy';},1600);});}
+</script>
+</body>
+</html>
